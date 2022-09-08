@@ -1,0 +1,246 @@
+:root{
+    --letra-blanca:rgb(255, 255, 255);
+    --letra-negra:rgb(0, 0, 0);
+    --section-part:rgba(255, 0, 0, 0.349);
+    --buttons:#10e3ea75;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 16px;
+    background-color: #1c3753;
+}
+
+/*barra de navegacion*/ /*FIRTS MOBILE*/
+
+.section_navegacion{
+ width: 100%;
+ height: 70rem;
+ background-image: url(../images_videos/hospital-Posadas.jpg);
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-blend-mode: darken;
+ background-color: rgba(0, 0, 0, 0.582);
+ 
+
+}
+.logo{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo img{
+    width:70px;
+     height: 80px;
+}
+.contenedor-navbar{
+ width: 100%;
+ height: 10rem;
+ background-color: var(--section-part);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: fixed;
+ backdrop-filter: blur(2.5px)
+
+}
+nav.navegation{
+    display: none;
+}
+nav.navegation.active{          /*la clase 'active' es agregada desde javascript*/
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 700px;
+    background-color: rgb(255, 0, 0); 
+}
+nav.navegation.active .enlace-nav{
+    padding: 20px;
+    color: var(--letra-blanca);
+    font-size: 20px;
+    font-weight: 600;
+
+}
+/* .enlace-nav{
+    padding: 20px;
+    color: var(--letra-blanca);
+    font-size: 20px;
+    font-weight: 600;   
+} */
+
+
+/*titulo*/
+.contenedor-titulo{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 150px;
+}
+
+.contenedor-titulo h1{
+    font-size: 28px;
+    text-align: center;
+    color: var(--letra-blanca);
+    font-weight: 500;
+}
+
+ /*diseño button del formulario*/
+
+.btn-formulario{
+    position: relative;
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    color:rgba(255, 255, 255, 0.808);
+    cursor: pointer;
+    transition: .5s;
+    font-size: 16px;
+    background-color: var(--buttons);
+    transform:  all 1s;
+    
+}
+.btn-formulario-2{    /*elimina el 'position:relative' para tener mejor vision del menu responsive*/
+  position:none;
+  display: none;
+}
+.btn-formulario:hover{
+    color: #fff;
+}
+.btn-formulario span{
+    position: absolute;
+    background-color: #fff;
+    transform:  all 1s;
+}
+ 
+.btn-formulario span:nth-child(1){
+ width: 50%;
+ height: 2px;
+ top: 0;
+ left: 50%;
+ transition: all 0.5s;
+
+}
+.btn-formulario span:nth-child(2){
+    width: 50%;
+    height: 2px;
+    bottom: 0;
+    right: 50%;                             /*spans colocados para realizar un ejecto en el enlace*/
+    transition: all 0.5s;
+}
+.btn-formulario span:nth-child(3){
+   width: 2px;
+    height: 50%;
+    bottom: 50%;
+    left:0;
+    transition: all 0.5s;
+}
+.btn-formulario span:nth-child(4){
+    width: 2px;
+     height: 50%;
+     top: 50%;
+     right:0;
+     transition: all 0.5s;
+ }
+
+ /*hover del enlace*/
+ .btn-formulario:hover span:nth-child(1){
+    left: 0;
+    width: 100%;
+ }
+ 
+ .btn-formulario:hover span:nth-child(2){
+    right: 0;
+    width: 100%;
+ }
+
+ .btn-formulario:hover span:nth-child(3){
+    bottom: 0;
+    height: 100%;
+ }
+
+ .btn-formulario:hover span:nth-child(4){
+    top: 0;
+    height: 100%;
+ }
+
+ 
+/*resoluciones*/
+
+
+
+/*mini tablet*/
+
+@media (min-width:768px) {
+    /*barra de navegacion*/
+.toggleBox{
+  display: none;  
+}
+nav.navegation{
+ display: flex;
+ width: 600px;
+ height: 100%;
+ align-items: center;
+ justify-content: space-evenly;
+ text-align: center;
+}
+nav.navegation a{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;  
+  transition: all 0.5s;
+}
+nav.navegation a:hover{
+color: rgba(255, 255, 255, 0.705);
+}
+
+/*titulo del inicio*/
+.contenedor-titulo h1{
+    font-size: 42px;
+}
+
+.btn-formulario{
+   padding: 20px 20px;
+   font-size: 32px; 
+   
+}
+}
+
+/*notebook*/
+
+@media (min-width:1024px) {
+    .section_navegacion{
+        height:72rem;
+    }
+}
+@media (min-width:1328px){
+    .section_navegacion{
+        height:80rem;
+    }
+}
+
+
+

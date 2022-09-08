@@ -1,0 +1,372 @@
+:root{
+    --letra-blanca:rgb(255, 255, 255);
+    --letra-negra:rgb(0, 0, 0);
+    --section-part:rgba(255, 0, 0, 0.349);
+    --buttons:#10e3ea75;
+    --color-terciario:rgb(253, 0, 177);
+
+}
+
+
+/*INFORMACION*/
+
+.informacion{
+  margin-top: 100px;  
+  width: 100%;
+  height: 130rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  flex-direction: column;
+  color: var(--letra-blanca);
+}
+.info-titulo{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--letra-blanca);
+    text-shadow: 2px 2px 2px #696;
+    
+ }
+
+
+ .contenedor_informacion{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;  
+  color: var(--letra-blanca);
+ }
+
+
+/*INFORMACION SOBRE DONAR*/
+
+
+.informacion-sobreDonar{
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row:20px;
+    background-color: var(--section-part-figures);
+    align-items: center;
+    text-align: center;
+  
+  }
+  .informacion-sobreDonar p{
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--letra-blanca);
+    text-overflow:3px 2px rgba(255, 255, 255, 0.226);
+  }
+
+  /*REQUISITOS*/
+
+  .requisitos-titulo{
+    margin-top: 20px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px #696;
+    color: var(--letra-blanca);
+  }
+
+
+  .contenedor-requisitos{
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--letra-blanca);
+
+  }
+
+
+
+
+  /*SECTION DEL INSTITUTO*/
+
+
+  .colegio{
+    width: 100%;
+    height: 75rem;
+    background-image: url(../images_videos/colegio.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.582);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    color: var(--letra-blanca);
+  }
+
+  .colegio h2{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+
+  .colegio p{
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  font-size: clamp(1.1rem,3vw,1.9rem);
+  line-height: 186.7%;
+  letter-spacing: 0.105em;
+  width: 90%;
+  }
+
+  .valores{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-terciario);
+  }
+
+
+  /*section contactanos*/
+
+ .contactanos{
+  width: 100%;
+  height: 95rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--letra-blanca);
+  background-color: #1c3753;
+  align-items: center;
+  gap: 40px;
+ }
+ 
+
+ .contactanos h2{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 40px;
+ }
+ .titulo-desaparece{   /*se le agrega el 'display:none' para que desaparezca el titulo y tener mejor vision del responsive*/
+  display: none;
+ }
+
+
+ .contenedor-contactanos{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+ }
+ .contenedor-contactanos iframe{
+  border-radius: 15px;
+ }
+
+ .contenedor-contactanos p{
+  font-size: 12px;
+  width: 100%;
+  font-weight: 500;
+  text-align: center;
+ }
+
+ /*REDES SOCIALES*/
+
+
+ .contenedor-redesSociales{
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+ }
+
+ .redes-sociales{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.whatsapp{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.redes-sociales p{
+  font-size: 22px;
+}
+.redes-sociales svg{
+  color: #fff;
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
+.redes-sociales svg:hover{
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.616);
+
+}
+
+
+
+.svg-desaparece{
+display: none;                                             /*clase agregada a los svg de las redes para mejor vision del menu responsive*/
+  
+}   
+.valores-desaparece{
+  display: none;
+}
+
+/*resoluciones*/
+
+@media (min-width:480px) {
+  
+  /*informacion*/
+  .info-titulo{
+    font-size: 32px;
+  }
+  .informacion-sobreDonar p{
+  font-size: 18px;
+  }
+  .requisitos-titulo{
+    font-size: 32px;
+  }
+  .contenedor-requisitos p{
+   font-size: 18px;
+   font-weight: 600;
+  }
+  /*instituto*/
+  .colegio{
+    height: 100rem;
+  }
+  .colegio h2{
+    font-size: 32px;
+  }
+ 
+
+}
+
+/*mini tablet*/
+
+@media (min-width:768px){
+  /*informacion*/
+  .info-titulo{
+    font-size: 32px;
+  }
+  .informacion-sobreDonar p{
+  font-size: 22px;
+  }
+  .requisitos-titulo{
+    font-size: 32px;
+  }
+  .contenedor-requisitos p{
+   font-size: 22px;
+   font-weight: 600;
+  }
+  /*instituto*/
+
+  .colegio h2{
+    font-size: 38px;
+  }
+  /*contactanos*/
+  .contactanos{
+   height: 105rem;
+  }
+  .contactanos h2{
+    font-size: 42px;
+  }
+  iframe{
+    width: 600px;
+    height: 400px;
+  }
+  .contenedor-contactanos div p{
+    font-size: 24px;
+  }
+  .contenedor-redesSociales{
+   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width:1024px) {
+  .colegio{
+    height: 88rem;
+    gap: 60px;
+  }
+  
+}
+
+/*resolucion alta*/
+@media (min-width:1328px){
+  
+ /*instituto*/
+ .colegio{
+  height: 70rem;
+ }
+ .colegio h2{
+  margin-top: 80px;
+ }
+ .colegio p{
+  width: 70%;
+ }
+ .valores{
+  height: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+ }
+ .valores p{
+  
+  font-size: 18px;
+  transition: all 0.5s;
+ }
+.valores p:hover{
+  transform: scale(1.2);
+}
+
+  /*contactanos*/
+  .contactanos{
+  height: 105rem;
+  }
+  .contenedor-contactanos{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ }   
+ .contenedor-maps{
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+  iframe{
+  width: 800px;
+  height: 700px;
+ }
+ .contenedor-redesSociales{
+  width: 200px;
+  grid-template-columns: none;
+ }
+}
+
+
+
+
+

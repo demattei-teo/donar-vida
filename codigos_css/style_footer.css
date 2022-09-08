@@ -1,0 +1,36 @@
+:root{
+    --letra-blanca:rgb(255, 255, 255);
+    --letra-negra:rgb(0, 0, 0);
+    --section-part:rgba(255, 0, 0, 0.349);
+    --buttons:#10e3ea75;
+    --color-terciario:rgb(253, 0, 177);
+
+}
+
+
+footer{
+    width: 100%;
+    height: 4rem;
+    background-color:#1c3753;
+    display: flex;
+    align-items: center;
+    
+}
+footer em{
+    width: 100%;
+    color: var(--letra-blanca);
+    font-size: clamp(1.1rem,3vw,1.9rem);
+    text-align: center;
+    font-size: 12px;
+}
+
+/*resoluciones*/
+
+
+/*mini tablet*/
+
+@media (min-width:768px){
+    footer em{
+        font-size: 20px;
+    }
+}
